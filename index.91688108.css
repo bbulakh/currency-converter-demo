@@ -105,6 +105,8 @@ input {
 
 select {
   appearance: none;
+  color: #000;
+  cursor: pointer;
   background: #fff url("https://ik.imagekit.io/zxaewhloxf/arrow.svg?updatedAt=1703427789279") 98% no-repeat;
   border: 1px solid #bbb;
   border-radius: 5px;
@@ -123,6 +125,7 @@ label {
 }
 
 .swapButton {
+  cursor: pointer;
   background: none;
   border: none;
   width: -moz-fit-content;
@@ -131,6 +134,7 @@ label {
 
 .convertButton {
   color: #fff;
+  cursor: pointer;
   background-color: #09f;
   border: none;
   border-radius: 5px;
