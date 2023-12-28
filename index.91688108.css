@@ -21,10 +21,11 @@ main {
 .nav {
   background-color: #f6f6f6;
   padding: 0 15px;
-  overflow: hidden;
 }
 
 .nav_content {
+  justify-content: space-between;
+  align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px 0;
@@ -52,7 +53,7 @@ main {
 
 .nav a:hover {
   color: #000;
-  background-color: #ddd;
+  background-color: #0000;
 }
 
 section {
@@ -124,12 +125,63 @@ label {
   font-weight: 500;
 }
 
-.swapButton {
+.secondaryButton {
   cursor: pointer;
   background: none;
   border: none;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
   width: -moz-fit-content;
   width: fit-content;
+  padding: 10px;
+  display: flex;
+}
+
+.secondaryButton:hover {
+  color: #000;
+  background-color: #0000;
+}
+
+.dropdown {
+  z-index: 2;
+  position: relative;
+}
+
+.dropdown_content {
+  text-align: center;
+  visibility: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  min-width: 250px;
+  padding: 0 20px;
+  list-style-type: none;
+  transition: all .1s cubic-bezier(.16, 1, .5, 1);
+  position: absolute;
+  right: 0;
+  transform: translateY(-20px);
+  box-shadow: 0 8px 16px #0003;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown_content li {
+  border-bottom: 2px solid #e7e7e7;
+  padding: 20px 0;
+}
+
+.dropdown_content li:last-of-type {
+  border-bottom: none;
+}
+
+@media (hover: hover) {
+  .secondaryButton:hover, .nav a:hover {
+    background-color: #ddd;
+  }
 }
 
 .convertButton {
@@ -147,9 +199,15 @@ label {
 }
 
 .output p {
-  margin: 10px;
-  font-size: 60px;
+  margin: 10px 0;
+  font-size: 30px;
   font-weight: bold;
+}
+
+@media (width >= 768px) {
+  .output p {
+    font-size: 60px;
+  }
 }
 
 footer {
